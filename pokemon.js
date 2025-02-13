@@ -24,9 +24,10 @@ class Pokemon {
 }
 
 class Fire extends Pokemon {
-  constructor(name, type) {
+  constructor(name) {
     super(name);
-    this.type = type;
+    this.type = "fire";
+    this.move = "ember"
   }
   isEffectiveAgainst(Pokemon2) {
     if (Pokemon2.type === "grass") {
@@ -47,9 +48,10 @@ class Fire extends Pokemon {
 }
 
 class Water extends Pokemon {
-  constructor(name, type) {
+  constructor(name) {
     super(name);
-    this.type = type;
+    this.type = "water";
+    this.move = "water gun"
   }
   isEffectiveAgainst(Pokemon2) {
     if (Pokemon2.type === "fire") {
@@ -71,9 +73,11 @@ class Water extends Pokemon {
 }
 
 class Grass extends Pokemon {
-  constructor(name, type) {
+  constructor(name) {
     super(name);
-    this.type = type;
+    this.type = "grass";
+    this.move = "vine whip"
+
   }
   isEffectiveAgainst(Pokemon2) {
     if (Pokemon2.type === "water") {
@@ -94,9 +98,10 @@ class Grass extends Pokemon {
 }
 
 class Normal extends Pokemon {
-  constructor(name, type) {
+  constructor(name) {
     super(name);
-    this.type = type;
+    this.type = "normal";
+    this.move = ""
   }
   isEffectiveAgainst(Pokemon2) {
     return null; /////check later
@@ -106,6 +111,16 @@ class Normal extends Pokemon {
     return null; /////check later
   }
 }
+
+
+const Charmander = new Fire("Charmander")
+const Squirtle = new Water("Squirtle")
+const Bulbasaur = new Grass("Bulbasaur")
+const Rattata = new Normal("Rattata")
+
+
+
+
 // const Pikachu = new Pokemon("Pikachu");
 
 // const Pokemon2 = new Grass("Leafeon", "grass");
@@ -113,5 +128,9 @@ class Normal extends Pokemon {
 // console.log(Pokemon1);
 // console.log(Pokemon2);
 // Pokemon1.isEffectiveAgainst(Pokemon2);
-module.exports = { Pokemon, Fire, Water, Normal, Grass };
+
+
+module.exports = { Pokemon, Fire, Water, Normal, Grass, Charmander, Squirtle, Bulbasaur, Rattata};
+
 // module.exports = Water;
+

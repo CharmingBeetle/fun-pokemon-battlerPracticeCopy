@@ -1,4 +1,4 @@
-const { Fire, Water, Grass, Normal, Pokemon } = require("../pokemon.js");
+const { Fire, Water, Grass, Normal, Pokemon } = require("../index");
 
 describe("Pokemon", () => {
   test("Returns an object with the correct properties", () => {
@@ -113,7 +113,7 @@ describe("ClassesTypes: isEffectiveAgainst", () => {
       expect(result).toBe(false);
     });
   });
-  describe("Fire", () => {
+ describe("Fire", () => {
     test("returns True if given Pokemon2 of Grass Type", () => {
       const Pokemon2 = new Grass("Leafeon", "grass");
       const Pokemon1 = new Fire("Charmander", "fire");
@@ -130,7 +130,7 @@ describe("ClassesTypes: isEffectiveAgainst", () => {
     });
   });
 
-  describe("Grass", () => {
+ describe("Grass", () => {
     test("returns True if given Pokemon2 of Water Type", () => {
       const Pokemon1 = new Grass("Leafeon", "grass");
       const Pokemon2 = new Water("Vaporeon", "water");
@@ -198,5 +198,34 @@ describe("ClassesTypes: isEffectiveAgainst", () => {
         expect(result).toBe(false);
       });
     });
+
+describe("Move Function", () => {
+    const Charmander = new Fire("Charmander")
+    const Squirtle = new Water("Squirtle")
+    const Bulbasaur = new Grass("Bulbasaur")
+    const Rattata = new Normal("Rattata")
+    describe("Fire", () => {
+        test("Returns ember when FirePokemon does an action", () => {
+          
+          const result = Charmander.move         //Assert
+          expect(result).toBe("ember");
+        });
   });
+  describe("Water", () => {
+    test("Returns water gun when WaterPokemon does an action", () => {
+      
+      const result = Squirtle.move         //Assert
+      expect(result).toBe("water gun");
+    });
 });
+  describe("Grass", () => {
+    test("Returns vine whip when GrassPokemon does an action", () => {
+      
+      const result = Bulbasaur.move         //Assert
+      expect(result).toBe("vine whip");
+    });
+});
+
+})
+});
+})
