@@ -1,0 +1,30 @@
+const {
+  Pokemon,
+  Fire,
+  Water,
+  Normal,
+  Grass,
+  Charmander,
+  Squirtle,
+  Bulbasaur,
+  Rattata,
+  Pokeball,
+} = require("./index.js");
+class Trainer2 {
+  constructor() {
+    (this.belt = []), (this.emptyPokeballs = 6);
+  }
+
+  catchPokemon(Pokemon) {
+    if (this.emptyPokeballs > 0) {
+      const catchingPokemon = new Pokeball();
+      catchingPokemon.throwPockeball(Pokemon);
+      this.belt.push(catchingPokemon);
+      this.emptyPokeballs--;
+    } else {
+      console.log("Your belt is full!");
+    }
+  }
+}
+
+module.exports = { Trainer2 };

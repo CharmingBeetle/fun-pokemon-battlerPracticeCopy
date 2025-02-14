@@ -8,7 +8,7 @@ const {
   Squirtle,
   Bulbasaur,
   Rattata,
-} = require("../fun-pokemon-battler/index");
+} = require("./index");
 
 //const Pokeball = [];
 // if (Pokeball.length === 0) {
