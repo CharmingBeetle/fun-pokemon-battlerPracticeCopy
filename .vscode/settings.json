@@ -1,6 +1,6 @@
 {
-    "terminal.integrated.fontFamily": "\"'Agave, Bold'\"",
-    "editor.fontFamily": "\"'Agave, Bold'\"",
+    "terminal.integrated.fontFamily": "\"'monospace'\"",
+    "editor.fontFamily": "\"'monospace'\"",
     "editor.fontLigatures": true,
     "editor.tokenColorCustomizations": {
 
@@ -25,5 +25,21 @@
             ]
         }
     },
-    "editor.fontVariations": false
+    "editor.fontVariations": true,
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.mouseWheelZoom": true,
+    "terminal.integrated.fontWeight": "normal",
+    "editor.wordWrap": "on"
 }
+ 
+ I hope this helps. 
+ Thanks for contributing an answer to Stack Overflow! 
+ To learn more, see our  tips on writing great answers. 
+ 
+                             Sign up using Email and Password
+                         
+ To subscribe to this @mention list, you must first register or log in. 
+ 
+                        To subscribe to this RSS feed, copy and paste this URL into your RSS reader. 
+ 
+                        By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our  Cookie Policy.
