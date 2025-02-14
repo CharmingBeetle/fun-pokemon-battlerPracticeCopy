@@ -30,7 +30,10 @@ class Pokeball {
       return this.CurrentPokemon;
     } else if (Pokemon === undefined && this.CurrentPokemon === undefined) {
       return undefined;
+    }else if(Pokemon !== undefined && this.CurrentPokemon !== undefined){
+      return this.CurrentPokemon
     }
+    
   }
 
   isEmpty() {

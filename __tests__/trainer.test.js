@@ -13,16 +13,46 @@ const {
 const { Trainer2 } = require("../trainer2");
 
 describe("Trainer: catch", () => {
-  test.only("If belt is not full, put catched pokemon inside of belt", () => {
+  test("If belt is not full, put catched pokemon inside of belt", () => {
     const trainer = new Trainer2();
     trainer.catchPokemon(Charmander);
 
     expect(trainer.belt.length).toBe(1);
   });
+  test("If belt is full, return message", () => {
+    const trainer = new Trainer2();
+    consoleSpy = jest.spyOn(console,"log")
+    trainer.catchPokemon(Charmander);
+    trainer.catchPokemon(Charmander);
+    trainer.catchPokemon(Charmander);
+    trainer.catchPokemon(Charmander);
+    trainer.catchPokemon(Charmander);
+    trainer.catchPokemon(Charmander);
+    trainer.catchPokemon(Charmander);
+    expect(consoleSpy.mock.calls[consoleSpy.mock.calls.length-1][0]).toBe("Your belt is full!");
+  });
 });
-// test("If pokeball is not empty return false", () => {
-//   const result = new Pokeball(); //Assert
-//   result.throwPockeball(Charmander);
-//   let check = result.isEmpty();
-//   expect(check).toBe(false);
-// });
+describe("Trainer:getPokemon ", () => {
+    test("Returns pokeball with the name from the getPokeball search", () => {
+      const trainer = new Trainer2();
+
+      trainer.catchPokemon(Charmander);
+      trainer.catchPokemon(Bulbasaur);
+      trainer.catchPokemon(Squirtle);
+      const result = trainer.getPokemon("Bulbasaur")
+  
+      expect(result).toEqual(Bulbasaur);
+    });
+    // test("If belt is full, return message", () => {
+    //   const trainer = new Trainer2();
+    //   consoleSpy = jest.spyOn(console,"log")
+    //   trainer.catchPokemon(Charmander);
+    //   trainer.catchPokemon(Charmander);
+    //   trainer.catchPokemon(Charmander);
+    //   trainer.catchPokemon(Charmander);
+    //   trainer.catchPokemon(Charmander);
+    //   trainer.catchPokemon(Charmander);
+    //   trainer.catchPokemon(Charmander);
+    //   expect(consoleSpy.mock.calls[consoleSpy.mock.calls.length-1][0]).toBe("Your belt is full!");
+    // });
+  });

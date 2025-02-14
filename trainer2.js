@@ -23,8 +23,17 @@ class Trainer2 {
       this.emptyPokeballs--;
     } else {
       console.log("Your belt is full!");
+   
     }
   }
-}
+    getPokemon(nameOfPokemon) {
+      for(let i = 0; i < this.belt.length; i++) {
+         const pokeball = this.belt[i]
+         const resultCheck = Object.values(pokeball)
+         console.log(resultCheck+ "We are checking it now")
+         }
+    }
+  
+  }
 
 module.exports = { Trainer2 };
