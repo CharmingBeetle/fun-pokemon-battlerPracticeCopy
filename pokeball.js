@@ -18,17 +18,32 @@ const {
 
 class Pokeball {
   constructor() {
-    this.CurrentPokemon = "empty";
+    this.CurrentPokemon = undefined;
   }
 
-  throwPockeball(Pokemon = undefined) {
-    if (this.CurrentPokemon === "empty") {
+  throwPockeball(Pokemon) {
+    if (this.CurrentPokemon === undefined && Pokemon !== undefined) {
       this.CurrentPokemon = Pokemon;
       console.log(`you caught ${Pokemon.name} name`);
+    } else if (Pokemon === undefined && this.CurrentPokemon !== undefined) {
+      console.log(`GO ${this.CurrentPokemon.name} name!!`);
+      return this.CurrentPokemon;
+    } else if (Pokemon === undefined && this.CurrentPokemon === undefined) {
+      return undefined;
     }
-    if (Pokemon === undefined){
-    return this.CurrentPokemon
+  }
+
+  isEmpty() {
+    if (this.CurrentPokemon === undefined) {
+      return true;
+    }
+    return false;
+  }
+  contains() {
+    if (this.CurrentPokemon !== undefined) {
+      return this.CurrentPokemon.name;
+    }
+    return "empty";
   }
 }
-
 module.exports = { Pokeball };
