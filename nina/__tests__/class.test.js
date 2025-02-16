@@ -23,7 +23,6 @@ describe('Is Effective Against', () => {
   describe('Pokemon Fire', () => {
     test('Returns TRUE if the Pokemon Fire is effective against Pokemon Grass', () => {
       const result = charmander.isEffectiveAgainst(bulbasaur)
-      console.log(charmander, bulbasaur, result)
       expect(result).toBe(true);
     });
      test('Returns FALSE if the Pokemon Fire is effective against Pokemon Water', () => {

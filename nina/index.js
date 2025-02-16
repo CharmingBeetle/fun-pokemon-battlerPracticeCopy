@@ -1,5 +1,6 @@
 const { Pokemon } = require("./pokemon")
-
+const { Pokeball } = require("./pokeball")
+const { Trainer } = require("./trainer")
 const { 
     Fire, 
     Water, 
@@ -11,19 +12,29 @@ const {
     Charmander, 
     Squirtle, 
     Bulbasaur, 
-    Rattata
-} = require("./pokemonSpecies")
+    Rattata,
+    charmander, 
+    squirtle, 
+    bulbasaur,
+    rattata }
+ = require("./pokemonSpecies")
 
 module.exports = {
     Pokemon,
     Charmander, 
     Squirtle, 
     Bulbasaur, 
-    Rattata, 
+    Rattata,
+    charmander, 
+    squirtle, 
+    bulbasaur,
+    rattata,
     Fire, 
     Water, 
     Grass,
-    Normal
+    Normal,
+    Pokeball, 
+    Trainer
 }
 
 // const charmander = new Charmander("Charmander", "Fire", "ember")
